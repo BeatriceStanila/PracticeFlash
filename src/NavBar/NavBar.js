@@ -1,16 +1,19 @@
 import React from "react";
 
-function NavBar() {
+function NavBar({ navClickHandler }) {
   return (
     <nav className="nav-bar">
-      <button>Technical</button>
-      <button>Behavioural</button>
-      <button>Random</button>
+      <button onClick={navClickHandler} value="Technical">
+        Technical
+      </button>
+      <button onClick={navClickHandler} value="Behavioural">
+        Behavioural
+      </button>
+      <button onClick={navClickHandler} value="Random">
+        Random
+      </button>
     </nav>
   );
 }
 
 export default NavBar;
-
-// onClick={() => setFlip(!flip)}>
-//         {flip ? <p>{answer}</p> : <p>Click here for answer</p>}
